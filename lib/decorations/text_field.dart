@@ -3,8 +3,9 @@
 import 'package:flutter/material.dart';
 
 class MyTextFieldDecoration extends InputDecoration {
-  MyTextFieldDecoration(var icon)
+  MyTextFieldDecoration(var icon, String type)
       : super(
+            labelText: type,
             filled: true,
             fillColor: Colors.amber[100],
             enabledBorder: OutlineInputBorder(
