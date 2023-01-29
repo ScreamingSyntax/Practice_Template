@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors
 
+import 'package:exams_over_practice/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -18,6 +19,7 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
       ),
       body: Column(),
+      drawer: MyDrawer(),
     );
   }
 }
