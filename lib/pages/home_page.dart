@@ -15,11 +15,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text("App bar"),
         centerTitle: true,
       ),
       body: Column(),
-      drawer: MyDrawer(),
+      drawer: MyAppDrawer(),
     );
   }
 }
