@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final dummyList = List.generate(4, ((index) => CatalogModel.product1[0]));
+  final dummyList = List.generate(10, ((index) => CatalogModel.product1[0]));
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
         title: Text("App bar"),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(13),
         child: ListView.builder(
           itemCount: dummyList.length,
           itemBuilder: (context, index) {
