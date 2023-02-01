@@ -31,11 +31,10 @@ class MyAppDrawer extends StatelessWidget {
                             offset: Offset(0, 0),
                             spreadRadius: 5)
                       ]),
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundImage: NetworkImage(_imageUrl),
-                      radius: 100,
-                    ),
+                  child: CircleAvatar(
+                    backgroundColor: Colors.white,
+                    foregroundImage: NetworkImage(_imageUrl),
+                    radius: 100,
                   ),
                 ),
                 SizedBox(
@@ -59,7 +58,7 @@ class MyAppDrawer extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Text(
                             "whcloud91@gmail.com",
-                            style: TextStyle(color: Colors.white, fontSize: 29),
+                            style: TextStyle(color: Colors.white, fontSize: 24),
                           ),
                         )),
                   ),
@@ -87,7 +86,7 @@ class MyAppDrawer extends StatelessWidget {
                   title: Text("My-Profile",
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 33,
+                          fontSize: 29,
                           fontWeight: FontWeight.bold)),
                 ),
                 ListTile(
@@ -96,7 +95,7 @@ class MyAppDrawer extends StatelessWidget {
                   title: Text("Contact-Us",
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 33,
+                          fontSize: 29,
                           fontWeight: FontWeight.bold)),
                 ),
                 ListTile(
@@ -105,7 +104,7 @@ class MyAppDrawer extends StatelessWidget {
                   title: Text("Log-Out",
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 33,
+                          fontSize: 29,
                           fontWeight: FontWeight.bold)),
                 ),
               ],

@@ -15,10 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
         title: Text("App bar"),
-        centerTitle: true,
       ),
       body: Column(),
       drawer: MyAppDrawer(),
