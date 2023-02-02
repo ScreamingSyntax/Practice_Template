@@ -10,6 +10,10 @@ void main(List<String> args) {
   runApp(MyApp());
 }
 
+ishan() {
+  print("object");
+}
+
 class MyApp extends StatelessWidget {
   MyApp({super.key});
   @override
