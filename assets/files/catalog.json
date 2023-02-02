@@ -1,0 +1,62 @@
+{
+    "products":[
+    {
+        "id":1,
+        "name":"Poco X3 Pro",
+        "desc":"6/128 GB with 120HZ display",
+        "price":30000,
+        "color":"#0000FF",
+        "image":"https://m.media-amazon.com/images/I/31f1QZweeuL.jpg"
+
+    },
+    {
+        "id":2,
+        "name":"Redmi Note 8 Pro",
+        "desc":"6/64 with Full HD display",
+        "price":24000,
+        "color":"#A020F0",
+        "image":"https://m.media-amazon.com/images/I/61ykl4wsysL._AC_SL1000_.jpg"
+    },
+    {
+        "id":3,
+        "name":"Redmi 3s",
+        "desc":"4/32 GB Super Durable",
+        "price":20000,
+        "color":"#FFD700.",
+        "image":"https://m.media-amazon.com/images/I/611jN6O5AbL._SY606_.jpg"
+    }
+    ,
+    {
+        "id":4,
+        "name":"Asus TUF Fx-505DT",
+        "desc":"120HZ 8GB with GTX 1650",
+        "price":94000,
+        "color":"#0A0A0A.",
+        "image":"https://m.media-amazon.com/images/I/81gK08T6tYL._AC_SL1500_.jpg"
+    },
+    {
+        "id":5,
+        "name":"JBL Flip 5",
+        "desc":"12 hours play time, Waterproof",
+        "price":24000,
+        "color":"#454B1B",
+        "image":"https://m.media-amazon.com/images/I/71iRuAtf86L._AC_SL1500_.jpg"
+    },
+    {
+        "id":6,
+        "name":"Realme Q2",
+        "desc":"Fast Charging 28Hrs Play Time",
+        "price":4200,
+        "color":"#808080",
+        "image":"https://m.media-amazon.com/images/I/51b4HBhB06L._SY355_.jpg"
+    },
+    {
+        "id":7,
+        "name":"Razer Viper Mini",
+        "desc":"Super Fast and LightWeight Gaming Mouse",
+        "price":5000,
+        "color":"#000000",
+        "image":"https://m.media-amazon.com/images/I/51x68cPn5pL._SL1500_.jpg"
+    }
+    ]
+}

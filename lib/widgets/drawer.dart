@@ -7,8 +7,7 @@ import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyAppDrawer extends StatelessWidget {
-  final _imageUrl =
-      "https://scontent.fbir5-1.fna.fbcdn.net/v/t39.30808-6/321277078_559659809035790_8976178344801828449_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=uOYZZ52rYZgAX_vk_le&_nc_ht=scontent.fbir5-1.fna&oh=00_AfBs4YNuvBfo8gSr5ifTqHhLDiqizQFBmRclGJddQCHW_A&oe=63DBB17A";
+  final _imageUrl = "https://avatars.githubusercontent.com/u/89018399?v=4";
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: Colors.white,
@@ -40,7 +39,7 @@ class MyAppDrawer extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                Container(
+                SizedBox(
                   height: 100,
                   child: Theme(
                     data: Theme.of(context)

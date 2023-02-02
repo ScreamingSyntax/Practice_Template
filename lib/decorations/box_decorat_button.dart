@@ -10,7 +10,6 @@ class MyBoxButton extends BoxDecoration {
             borderRadius: BorderRadius.circular(5),
             border: Border.all(color: Colors.red, width: 2),
             boxShadow: [
-              // ignore: prefer_const_constructors
               BoxShadow(
                   color: Colors.green,
                   offset: Offset(-7, 11),
