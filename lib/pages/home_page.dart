@@ -40,11 +40,40 @@ class _HomePageState extends State<HomePage> {
       body: Padding(
         padding: const EdgeInsets.all(13),
         child: (CatalogModel.product1.isNotEmpty)
-            ? ListView.builder(
+            ? GridView.builder(
                 itemCount: CatalogModel.product1.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 20,
+                    crossAxisCount: 2),
                 itemBuilder: (context, index) {
-                  return ItemWidget(
-                    item: CatalogModel.product1[index],
+                  final item = CatalogModel.product1[index];
+                  return Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: GridTile(
+                      child: Image.network(item.image),
+                      header: Container(
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: Colors.deepPurple,
+                          ),
+                          child: Text(
+                            item.name,
+                            style: TextStyle(color: Colors.white),
+                          )),
+                      footer: Container(
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+                          ),
+                          child: Text(
+                            item.price.toString(),
+                            style: TextStyle(color: Colors.white),
+                          )),
+                    ),
                   );
                 },
               )

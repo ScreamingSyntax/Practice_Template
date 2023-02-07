@@ -13,7 +13,8 @@ class ItemWidget extends StatelessWidget {
       child: ListTile(
         leading: Image.network(
           item.image,
-          height: 50,
+          height: MediaQuery.of(context).size.width * 1,
+          width: MediaQuery.of(context).size.width * 0.1,
         ),
         title: Text(item.name),
         subtitle: Text(item.desc),
