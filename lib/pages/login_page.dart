@@ -1,12 +1,13 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_build_context_synchronously
 
 import 'package:exams_over_practice/pages/decorations/boxshadow_decoration.dart';
 import 'package:exams_over_practice/pages/decorations/textfield_decorations.dart';
 import 'package:exams_over_practice/routes/routes_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+  @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
@@ -41,6 +42,7 @@ class _LoginPageState extends State<LoginPage> {
     return null;
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -87,7 +89,6 @@ class _LoginPageState extends State<LoginPage> {
                     Container(
                       decoration: MyBoxShadow(),
                       child: TextFormField(
-                        inputFormatters: [],
                         validator: (value) =>
                             _validation(value, 10, "Password"),
                         decoration: MyTextFieldDecoration(

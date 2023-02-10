@@ -7,11 +7,11 @@ class MyTextFieldDecoration extends InputDecoration {
             prefixIcon: icon,
             filled: true,
             hintText: labelText,
-            fillColor: Color.fromARGB(255, 246, 247, 247),
+            fillColor: const Color.fromARGB(255, 246, 247, 247),
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
-                borderSide: BorderSide(color: Colors.white, width: 2)),
+                borderSide: const BorderSide(color: Colors.white, width: 2)),
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
-                borderSide: BorderSide(color: Colors.white)));
+                borderSide: const BorderSide(color: Colors.white)));
 }
