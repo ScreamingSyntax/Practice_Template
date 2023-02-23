@@ -9,8 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
-import 'home widgets/catalog_header.dart';
-import 'home widgets/product_list.dart';
+import '../widgets/home widgets/catalog_header.dart';
+import '../widgets/home widgets/product_list.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
