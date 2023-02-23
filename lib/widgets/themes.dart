@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyTheme {
+  static Color bluishColor = Color(0xFF151B74);
+  static Color creamishColor = Color(0xFF5F5F5F5);
   static lightTheme(BuildContext context) => ThemeData(
-        fontFamily: GoogleFonts.lato().fontFamily,
+        fontFamily: GoogleFonts.poppins().fontFamily,
         appBarTheme: AppBarTheme(
           foregroundColor: Colors.black,
           color: Colors.white,
