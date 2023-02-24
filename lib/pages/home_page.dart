@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors
 
+import 'package:exams_over_practice/Routes/my_routes.dart';
 import 'package:exams_over_practice/models/catalog.dart';
 import 'package:exams_over_practice/widgets/drawer.dart';
 import 'package:exams_over_practice/widgets/item.dart';
@@ -8,6 +9,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../widgets/home widgets/catalog_header.dart';
 import '../widgets/home widgets/product_list.dart';
@@ -38,6 +40,20 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: SizedBox(
+        height: 50,
+        width: 50,
+        child: FloatingActionButton(
+          backgroundColor: MyTheme.creamishColor,
+          splashColor: MyTheme.bluishColor,
+          onPressed: () => Navigator.pushNamed(context, MyRoutes.cartPageRoute),
+          child: Icon(
+            size: 20,
+            FontAwesomeIcons.cartArrowDown,
+            color: MyTheme.bluishColor,
+          ),
+        ),
+      ),
       backgroundColor: MyTheme.creamishColor,
       body: SafeArea(
           child: Container(

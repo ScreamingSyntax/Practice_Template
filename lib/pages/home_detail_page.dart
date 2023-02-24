@@ -2,6 +2,7 @@ import 'package:exams_over_practice/models/catalog.dart';
 import 'package:exams_over_practice/widgets/themes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomeDetailPage extends StatelessWidget {
@@ -11,9 +12,11 @@ class HomeDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         foregroundColor: MyTheme.bluishColor,
       ),
       bottomNavigationBar: Container(
+        color: MyTheme.creamishColor,
         height: 80,
         child: ButtonBar(
           // mainAxisSize: MainAxisSize.min,
@@ -28,11 +31,10 @@ class HomeDetailPage extends StatelessWidget {
                   color: MyTheme.bluishColor, fontWeight: FontWeight.bold),
             ),
             ElevatedButton(
-              onPressed: () => print("Hello"),
-              child: Text("Buy"),
-              style: ButtonStyle(
-                  shape: MaterialStatePropertyAll(StadiumBorder()),
-                  fixedSize: MaterialStatePropertyAll(Size(40, 40))),
+              onPressed: () => null,
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: MyTheme.bluishColor),
+              child: const Text("Buy"),
             )
           ],
         ),
@@ -41,7 +43,7 @@ class HomeDetailPage extends StatelessWidget {
         child: Container(
           // padding: EdgeInsets.all(10),
           color: Colors.white,
-          constraints: BoxConstraints.expand(),
+          constraints: const BoxConstraints.expand(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -64,7 +66,7 @@ class HomeDetailPage extends StatelessWidget {
                   edge: VxEdge.TOP,
                   height: 20,
                   child: Container(
-                    padding: EdgeInsets.all(30),
+                    padding: const EdgeInsets.all(30),
                     width: context.screenWidth,
                     // height: context.screenHeight,
                     color: MyTheme.creamishColor,
@@ -79,11 +81,16 @@ class HomeDetailPage extends StatelessWidget {
                         ),
                         Text(
                           item.desc,
-                          style: TextStyle(color: Colors.black45, fontSize: 13),
+                          style: const TextStyle(
+                              color: Colors.black45, fontSize: 13),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
+                        "Ipsum diam consetetur dolor sed stet elitr et. Ut et ut lorem et. Lorem dolores gubergren no justo clita. Labore."
+                            .text
+                            .textStyle(context.captionStyle)
+                            .make(),
                       ],
                     ),
                   ),

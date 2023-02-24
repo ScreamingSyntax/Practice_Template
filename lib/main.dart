@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors
 
 import 'package:exams_over_practice/Routes/my_routes.dart';
+import 'package:exams_over_practice/pages/cart_page.dart';
 import 'package:exams_over_practice/pages/home_page.dart';
 import 'package:exams_over_practice/pages/login_page.dart';
 import 'package:exams_over_practice/widgets/themes.dart';
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         MyRoutes.loginPage: ((context) => LoginPage()),
-        MyRoutes.homePage: ((context) => HomePage())
+        MyRoutes.homePage: ((context) => HomePage()),
+        MyRoutes.cartPageRoute: (context) => CartPage()
       },
     );
   }

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyTheme {
-  static Color bluishColor = Color(0xFF151B74);
+  static Color bluishColor = Color(0xff403b58);
   static Color creamishColor = Color(0xFF5F5F5F5);
   static lightTheme(BuildContext context) => ThemeData(
         fontFamily: GoogleFonts.poppins().fontFamily,

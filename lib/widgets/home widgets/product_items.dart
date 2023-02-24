@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:velocity_x/velocity_x.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../models/catalog.dart';
 import '../themes.dart';
 
@@ -26,43 +27,50 @@ class ProductItems extends StatelessWidget {
               width: MediaQuery.of(context).size.width / 5,
             ),
           ),
-          SizedBox(
-            width: 15,
+          const SizedBox(
+            width: 20,
           ),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  item.name,
-                  style: TextStyle(
-                      color: MyTheme.bluishColor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: MediaQuery.of(context).size.width / 19),
-                ),
-                Text(
-                  item.desc,
-                  style: TextStyle(color: Colors.black45, fontSize: 13),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
+                "${item.name}".text.color(MyTheme.bluishColor).bold.make(),
+                "${item.desc}".text.textStyle(context.captionStyle).make(),
                 ButtonBar(
-                  alignment: MainAxisAlignment.spaceBetween,
+                  alignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text(
-                      'Rs ${item.price.toString()}',
-                      style: TextStyle(
+                    TextButton.icon(
+                        onPressed: null,
+                        icon: FaIcon(
+                          FontAwesomeIcons.cashRegister,
                           color: MyTheme.bluishColor,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => print("Hello"),
-                      child: Text("Buy"),
-                      style: ButtonStyle(
-                          shape: MaterialStatePropertyAll(StadiumBorder())),
-                    )
+                          size: 19,
+                        ),
+                        label: Text(
+                          "Rs ${item.price}",
+                          style: TextStyle(
+                              color: MyTheme.bluishColor,
+                              // fontWeight: FontWeight.bold,
+                              fontSize: 12),
+                        )),
+                    TextButton.icon(
+                        style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStatePropertyAll(MyTheme.bluishColor)),
+                        onPressed: () => print("Test"),
+                        icon: FaIcon(
+                          FontAwesomeIcons.cartPlus,
+                          color: MyTheme.creamishColor,
+                          size: 19,
+                        ),
+                        label: Text(
+                          "Add To Cart",
+                          style: TextStyle(
+                              color: MyTheme.creamishColor,
+                              // fontWeight: FontWeight.bold,
+                              fontSize: 12),
+                        ))
                   ],
                 )
               ],
