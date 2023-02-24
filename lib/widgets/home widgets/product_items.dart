@@ -12,19 +12,28 @@ class ProductItems extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(35),
+      padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: Colors.white,
+        color: Theme.of(context).cardColor,
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Hero(
             tag: Key(item.id.toString()),
-            child: Image.network(
-              item.image,
-              width: MediaQuery.of(context).size.width / 5,
+            child: Container(
+              height: 150,
+              width: 120,
+              padding: EdgeInsets.only(top: 20, bottom: 20),
+              decoration: BoxDecoration(
+                  color: Theme.of(context).canvasColor,
+                  borderRadius: BorderRadius.circular(20)),
+              alignment: Alignment.center,
+              child: Image.network(
+                item.image,
+                width: MediaQuery.of(context).size.width / 5,
+              ),
             ),
           ),
           const SizedBox(
@@ -32,42 +41,51 @@ class ProductItems extends StatelessWidget {
           ),
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              // mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                "${item.name}".text.color(MyTheme.bluishColor).bold.make(),
-                "${item.desc}".text.textStyle(context.captionStyle).make(),
+                "${item.name}"
+                    .text
+                    .color(Theme.of(context).colorScheme.primary)
+                    .extraBold
+                    .fade
+                    .make(),
+                "${item.desc}"
+                    .text
+                    .color(Theme.of(context).colorScheme.secondary)
+                    .textStyle(context.captionStyle)
+                    .make(),
                 ButtonBar(
-                  alignment: MainAxisAlignment.spaceAround,
+                  alignment: MainAxisAlignment.spaceBetween,
                   children: [
                     TextButton.icon(
                         onPressed: null,
                         icon: FaIcon(
                           FontAwesomeIcons.cashRegister,
-                          color: MyTheme.bluishColor,
+                          color: Theme.of(context).colorScheme.primary,
                           size: 19,
                         ),
                         label: Text(
                           "Rs ${item.price}",
                           style: TextStyle(
-                              color: MyTheme.bluishColor,
+                              color: Theme.of(context).colorScheme.primary,
                               // fontWeight: FontWeight.bold,
                               fontSize: 12),
                         )),
                     TextButton.icon(
                         style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStatePropertyAll(MyTheme.bluishColor)),
+                            backgroundColor: MaterialStatePropertyAll(
+                                Theme.of(context).colorScheme.onPrimary)),
                         onPressed: () => print("Test"),
                         icon: FaIcon(
                           FontAwesomeIcons.cartPlus,
-                          color: MyTheme.creamishColor,
+                          color: Theme.of(context).colorScheme.onSecondary,
                           size: 19,
                         ),
                         label: Text(
                           "Add To Cart",
                           style: TextStyle(
-                              color: MyTheme.creamishColor,
+                              color: Theme.of(context).colorScheme.onSecondary,
                               // fontWeight: FontWeight.bold,
                               fontSize: 12),
                         ))

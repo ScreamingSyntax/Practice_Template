@@ -12,11 +12,13 @@ class HomeDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: InkWell(
+            onTap: () => Navigator.pop(context),
+            child: Icon(Icons.arrow_back_ios)),
         backgroundColor: Colors.transparent,
-        foregroundColor: MyTheme.bluishColor,
       ),
       bottomNavigationBar: Container(
-        color: MyTheme.creamishColor,
+        color: Theme.of(context).cardColor,
         height: 80,
         child: ButtonBar(
           // mainAxisSize: MainAxisSize.min,
@@ -33,8 +35,12 @@ class HomeDetailPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () => null,
               style: ElevatedButton.styleFrom(
-                  backgroundColor: MyTheme.bluishColor),
-              child: const Text("Buy"),
+                  backgroundColor: Theme.of(context).colorScheme.onPrimary),
+              child: Text(
+                "Buy",
+                style:
+                    TextStyle(color: Theme.of(context).colorScheme.onSecondary),
+              ),
             )
           ],
         ),
@@ -42,21 +48,18 @@ class HomeDetailPage extends StatelessWidget {
       body: SafeArea(
         child: Container(
           // padding: EdgeInsets.all(10),
-          color: Colors.white,
+          color: Theme.of(context).canvasColor,
           constraints: const BoxConstraints.expand(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Hero(
-                  tag: Key(item.id.toString()),
-                  child: Image.network(
-                      // fit: BoxFit.contain,
-                      item.image,
-                      width: MediaQuery.of(context).size.width / 3,
-                      height: MediaQuery.of(context).size.height / 3),
-                ),
+              Hero(
+                tag: Key(item.id.toString()),
+                child: Image.network(
+                    // fit: BoxFit.contain,
+                    item.image,
+                    width: MediaQuery.of(context).size.width / 3,
+                    height: MediaQuery.of(context).size.height / 3),
               ),
               Expanded(
                 flex: 10,
@@ -69,28 +72,30 @@ class HomeDetailPage extends StatelessWidget {
                     padding: const EdgeInsets.all(30),
                     width: context.screenWidth,
                     // height: context.screenHeight,
-                    color: MyTheme.creamishColor,
+                    color: Theme.of(context).cardColor,
                     child: Column(
                       children: [
-                        Text(
-                          item.name,
-                          style: TextStyle(
-                              color: MyTheme.bluishColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: MediaQuery.of(context).size.width / 19),
-                        ),
-                        Text(
-                          item.desc,
-                          style: const TextStyle(
-                              color: Colors.black45, fontSize: 13),
-                        ),
+                        "${item.name}"
+                            .text
+                            .xl3
+                            .bold
+                            .color(Theme.of(context).colorScheme.primary)
+                            .make()
+                            .p16(),
+                        "${item.desc}"
+                            .text
+                            .color(Theme.of(context).colorScheme.primary)
+                            .textStyle(context.captionStyle)
+                            .make(),
                         const SizedBox(
                           height: 10,
                         ),
                         "Ipsum diam consetetur dolor sed stet elitr et. Ut et ut lorem et. Lorem dolores gubergren no justo clita. Labore."
                             .text
+                            .color(Theme.of(context).colorScheme.primary)
                             .textStyle(context.captionStyle)
-                            .make(),
+                            .make()
+                            .p16(),
                       ],
                     ),
                   ),

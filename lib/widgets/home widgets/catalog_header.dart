@@ -30,7 +30,7 @@ class MyTextStyle extends TextStyle {
       required double width,
       bool fontWeightStatus = true})
       : super(
-            color: MyTheme.bluishColor,
+            color: Theme.of(context).colorScheme.primary,
             fontWeight: fontWeightStatus ? FontWeight.bold : FontWeight.w200,
             fontSize: MediaQuery.of(context).size.width / width);
 }

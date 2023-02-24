@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 import '../widgets/home widgets/catalog_header.dart';
 import '../widgets/home widgets/product_list.dart';
@@ -44,17 +45,14 @@ class _HomePageState extends State<HomePage> {
         height: 50,
         width: 50,
         child: FloatingActionButton(
-          backgroundColor: MyTheme.creamishColor,
-          splashColor: MyTheme.bluishColor,
           onPressed: () => Navigator.pushNamed(context, MyRoutes.cartPageRoute),
           child: Icon(
             size: 20,
             FontAwesomeIcons.cartArrowDown,
-            color: MyTheme.bluishColor,
           ),
         ),
       ),
-      backgroundColor: MyTheme.creamishColor,
+      backgroundColor: Theme.of(context).canvasColor,
       body: SafeArea(
           child: Container(
         margin: EdgeInsets.all(13),
