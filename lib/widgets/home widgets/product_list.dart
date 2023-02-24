@@ -1,8 +1,9 @@
-import 'package:exams_over_practice/pages/home%20widgets/product_items.dart';
+import 'package:exams_over_practice/pages/home_detail_page.dart';
+import 'package:exams_over_practice/widgets/home%20widgets/product_items.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/catalog.dart';
-import '../../widgets/themes.dart';
+import '../themes.dart';
 
 class ProductList extends StatefulWidget {
   const ProductList({super.key});
@@ -19,7 +20,14 @@ class _ProductListState extends State<ProductList> {
       itemBuilder: (context, index) {
         return Container(
             margin: EdgeInsets.all(13),
-            child: ProductItems(item: CatalogModel.product1[index]));
+            child: InkWell(
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          HomeDetailPage(item: CatalogModel.product1[index]),
+                    )),
+                child: ProductItems(item: CatalogModel.product1[index])));
       },
     );
   }

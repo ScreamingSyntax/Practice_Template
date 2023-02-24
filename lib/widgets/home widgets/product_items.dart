@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../models/catalog.dart';
-import '../../widgets/themes.dart';
+import '../themes.dart';
 
 class ProductItems extends StatelessWidget {
   final Item item;
@@ -19,9 +19,12 @@ class ProductItems extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.network(
-            item.image,
-            width: MediaQuery.of(context).size.width / 5,
+          Hero(
+            tag: Key(item.id.toString()),
+            child: Image.network(
+              item.image,
+              width: MediaQuery.of(context).size.width / 5,
+            ),
           ),
           SizedBox(
             width: 15,
